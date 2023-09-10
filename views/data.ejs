@@ -1,0 +1,27 @@
+<!-- <%= JSON.stringify(adminRows) %> -->
+
+<table border="1">
+
+    <tr>
+        <th>admin_id</th>
+        <th>admin_user_name</th>
+        <th>admin_password</th>
+        <th>admin_full_name</th>
+        <th>admin_contact_number</th>
+        <th>admin_dob</th>
+    </tr>
+    <tbody>
+        <% for(let i=0; i<adminRows.length; i++) { %>
+            <tr>
+                <td><%= adminRows[i].admin_id %></td>
+                <td><%= adminRows[i].admin_user_name %></td>
+                <td><%= adminRows[i].admin_password %></td>
+                <td><%= adminRows[i].admin_full_name %></td>
+                <td><%= adminRows[i].admin_contact_number %></td>
+                <td><%= new Date(adminRows[i].admin_dob).toLocaleDateString() %></td>
+            </tr>
+
+        <% } %>
+    </tbody>
+
+</table>
